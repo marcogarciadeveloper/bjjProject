@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<br>
+<body>
+
+    <div class="topnav">
+        <a routerLink="">Home</a>
+        <a >About</a>
+        <a >Contact</a>
+        <a *ngIf="this.hardcodedAuthentication.isUserLoggedIn()" routerLink="home" (click)="handleLogOut()" class="logout">Logout</a>
+        <a *ngIf="!this.hardcodedAuthentication.isUserLoggedIn()" routerLink="login" class="loginButton">Login</a>
+        <a *ngIf="!this.hardcodedAuthentication.isUserLoggedIn()" routerLink="register" class="signupButton">SignUp</a>
+    </div>
+</body>
+
+</html>
